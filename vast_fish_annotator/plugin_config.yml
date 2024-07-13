@@ -1,5 +1,5 @@
-name: Plugin Name
-view: Popup # Tab or Popup if has an GUI
+name: VAST Fish Annotator
+view: Tab # Tab or Popup if has an GUI
 
 acquisition_modes: 
   - name: Plugin Acquisition

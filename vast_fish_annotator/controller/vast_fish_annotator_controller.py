@@ -1,5 +1,10 @@
-class PluginNameController:
-    def __init__(self, view, parent_controller=None):
+import threading
+
+from navigate.controller.controller import Controller
+
+class VastFishAnnotatorController:
+    
+    def __init__(self, view, parent_controller:Controller=None):
         self.view = view
         self.parent_controller = parent_controller
         
@@ -14,7 +19,7 @@ class PluginNameController:
     def move(self, *args):
         """Example function to move the plugin device
         """
-
+        
         print("*** Move button is clicked!")
         self.parent_controller.execute("move_plugin_device", self.variables["plugin_name"].get())
 

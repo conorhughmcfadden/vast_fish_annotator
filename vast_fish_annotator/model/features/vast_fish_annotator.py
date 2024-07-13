@@ -1,5 +1,7 @@
-class ExampleFeature:
-    def __init__(self, model, *args):
+from navigate.model.model import Model
+
+class VastFishAnnotator:
+    def __init__(self, model:Model, *args):
         self.model = model
 
         self.config_table = {
@@ -36,7 +38,7 @@ class ExampleFeature:
 
     def pre_func_data(self):
         """Prepare data thread to run this feature"""
-        pass
+        self.model.pause_data_thread()
 
     def in_func_data(self, frame_ids):
         """Deal with images"""
@@ -44,7 +46,7 @@ class ExampleFeature:
 
     def end_func_data(self):
         """Decide if this feature ends"""
-        pass
+        self.model.resume_data_thread()
 
     def cleanup_func_signal(self):
         """Cleanup"""
