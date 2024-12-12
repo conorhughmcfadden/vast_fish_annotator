@@ -8,7 +8,6 @@ from navigate.model.device_startup_functions import device_not_found
 DEVICE_TYPE_NAME = "plugin_device"  # Same as in configuraion.yaml, for example "stage", "filter_wheel", "remote_focus_device"...
 DEVICE_REF_LIST = ["type"]  # the reference value from configuration.yaml
 
-
 def load_device(hardware_configuration, is_synthetic=False):
     """Build device connection.
 
